@@ -16,10 +16,6 @@ public class ExeJanken : MonoBehaviour
     // シーン遷移前待機時間
     [SerializeField] float waitTime = 1.0f;
 
-    public int winScore = 0;
-    public int loseScore = 0;
-    public int evenScore = 0;
-
     private void Start()
     {
         // すべての画像を非表示
@@ -74,22 +70,28 @@ public class ExeJanken : MonoBehaviour
 
     void LoadSceneWin()
     {
+        int score = PlayerPrefs.GetInt("かち");
+        score += 1;
+        PlayerPrefs.SetInt("かち", score);
+
         SceneManager.LoadScene(win);
-        winScore += 1;
-        PlayerPrefs.SetInt("かち", winScore);
     }
 
     void LoadSceneEven()
     {
+        int score = PlayerPrefs.GetInt("あいこ");
+        score += 1;
+        PlayerPrefs.SetInt("あいこ", score);
+
         SceneManager.LoadScene(even);
-        evenScore += 1;
-        PlayerPrefs.SetInt("あいこ", evenScore);
     }
 
     void LoadSceneLose()
     {
+        int score = PlayerPrefs.GetInt("まけ");
+        score += 1;
+        PlayerPrefs.SetInt("まけ", score);
+
         SceneManager.LoadScene(lose);
-        loseScore += 1;
-        PlayerPrefs.SetInt("まけ", loseScore);
     }
 }

@@ -14,6 +14,5 @@ public class PrintRecords : MonoBehaviour
         _text.text = "‚©‚¿: " + PlayerPrefs.GetInt("‚©‚¿")
                         + "  ‚ ‚¢‚±: " + PlayerPrefs.GetInt("‚ ‚¢‚±")
                         + "  ‚Ü‚¯: " + PlayerPrefs.GetInt("‚Ü‚¯");
-        Debug.Log(PlayerPrefs.GetInt("‚Ü‚¯"));
     }
 }
