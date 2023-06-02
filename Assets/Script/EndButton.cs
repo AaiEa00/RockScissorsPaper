@@ -1,17 +1,17 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class EndButton : MonoBehaviour
 {
-    // o‚·è
+    // å‡ºã™æ‰‹
     int resultHand = 0;
 
-    // ‚¶‚á‚ñ‚¯‚ñ‚Ìè‚Ìí—Ş
+    // ã˜ã‚ƒã‚“ã‘ã‚“ã®æ‰‹ã®ç¨®é¡
     int jankenNum = 3;
 
-    // ƒAƒNƒZƒX—p
+    // ã‚¢ã‚¯ã‚»ã‚¹ç”¨
     [SerializeField] GameObject obj;
     ExeJanken exe;
 
@@ -23,10 +23,10 @@ public class EndButton : MonoBehaviour
 
     public void OnClick()
     {
-        // —”¶¬
+        // ä¹±æ•°ç”Ÿæˆ
         resultHand = Random.Range(0, jankenNum);
 
-        // —”‚©‚ç‰æ‘œ‚ğ•\¦
+        // ä¹±æ•°ã‹ã‚‰ç”»åƒã‚’è¡¨ç¤º
         exe.PrintImage(resultHand, gameObject);
     }
 }

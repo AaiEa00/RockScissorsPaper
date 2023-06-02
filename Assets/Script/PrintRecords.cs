@@ -1,4 +1,4 @@
-using System.Collections;
+Ôªøusing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,8 +11,8 @@ public class PrintRecords : MonoBehaviour
     {
         TryGetComponent(out _text);
 
-        _text.text = "Ç©Çø: " + PlayerPrefs.GetInt("Ç©Çø")
-                        + "  Ç†Ç¢Ç±: " + PlayerPrefs.GetInt("Ç†Ç¢Ç±")
-                        + "  Ç‹ÇØ: " + PlayerPrefs.GetInt("Ç‹ÇØ");
+        _text.text = "„Åã„Å°: " + PlayerPrefs.GetInt("„Åã„Å°")
+                        + "  „ÅÇ„ÅÑ„Åì: " + PlayerPrefs.GetInt("„ÅÇ„ÅÑ„Åì")
+                        + "  „Åæ„Åë: " + PlayerPrefs.GetInt("„Åæ„Åë");
     }
 }

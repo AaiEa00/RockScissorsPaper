@@ -1,24 +1,24 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ExeJanken : MonoBehaviour
 {
-    // è‚Ì‰æ‘œƒŠƒXƒg
+    // æ‰‹ã®ç”»åƒãƒªã‚¹ãƒˆ
     [SerializeField] GameObject[] handsImages = new GameObject[3];
 
-    // Œ‹‰Ê
+    // çµæœ
     const int win = 1;
     const int even = 2;
     const int lose = 3;
 
-    // ƒV[ƒ“‘JˆÚ‘O‘Ò‹@ŠÔ
+    // ã‚·ãƒ¼ãƒ³é·ç§»å‰å¾…æ©Ÿæ™‚é–“
     [SerializeField] float waitTime = 1.0f;
 
     private void Start()
     {
-        // ‚·‚×‚Ä‚Ì‰æ‘œ‚ğ”ñ•\¦
+        // ã™ã¹ã¦ã®ç”»åƒã‚’éè¡¨ç¤º
         for (int i = 0; i < handsImages.Length; i++)
         {
             handsImages[i].SetActive(false);
@@ -26,7 +26,7 @@ public class ExeJanken : MonoBehaviour
     }
 
     /// <summary>
-    /// o‚·è‚Ì‰æ‘œ‚ğ•\¦
+    /// å‡ºã™æ‰‹ã®ç”»åƒã‚’è¡¨ç¤º
     /// </summary>
     /// <param name="num"></param>
     /// <param name="clicked"></param>
@@ -70,27 +70,27 @@ public class ExeJanken : MonoBehaviour
 
     void LoadSceneWin()
     {
-        int score = PlayerPrefs.GetInt("‚©‚¿");
+        int score = PlayerPrefs.GetInt("ã‹ã¡");
         score += 1;
-        PlayerPrefs.SetInt("‚©‚¿", score);
+        PlayerPrefs.SetInt("ã‹ã¡", score);
 
         SceneManager.LoadScene(win);
     }
 
     void LoadSceneEven()
     {
-        int score = PlayerPrefs.GetInt("‚ ‚¢‚±");
+        int score = PlayerPrefs.GetInt("ã‚ã„ã“");
         score += 1;
-        PlayerPrefs.SetInt("‚ ‚¢‚±", score);
+        PlayerPrefs.SetInt("ã‚ã„ã“", score);
 
         SceneManager.LoadScene(even);
     }
 
     void LoadSceneLose()
     {
-        int score = PlayerPrefs.GetInt("‚Ü‚¯");
+        int score = PlayerPrefs.GetInt("ã¾ã‘");
         score += 1;
-        PlayerPrefs.SetInt("‚Ü‚¯", score);
+        PlayerPrefs.SetInt("ã¾ã‘", score);
 
         SceneManager.LoadScene(lose);
     }

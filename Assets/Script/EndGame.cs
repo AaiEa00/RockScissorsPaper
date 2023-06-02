@@ -1,4 +1,4 @@
-using System.Collections;
+Ôªøusing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,7 +8,7 @@ public class EndGame : MonoBehaviour
     {
         PlayerPrefs.DeleteAll();
 
-        // ÉQÅ[ÉÄÇèIóπ
+        // „Ç≤„Éº„É†„ÇíÁµÇ‰∫Ü
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else
