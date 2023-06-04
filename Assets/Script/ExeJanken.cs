@@ -33,12 +33,14 @@ public class ExeJanken : MonoBehaviour
 
     /// <summary>
     /// 出す手の画像を表示
+    /// EndButtonから呼び出される
     /// </summary>
-    /// <param name="num"></param>
+    /// <param name="num">生成した乱数</param>
     /// <param name="clicked"></param>
     public void PrintImage(int num, GameObject clicked)
     {
-        if (2 < num) return;
+        Debug.Assert(num < handsTypes.Length);
+
         handsImages[num].SetActive(true);
         JudgeResult(num, clicked);
     }
@@ -48,7 +50,7 @@ public class ExeJanken : MonoBehaviour
     /// </summary>
     /// <param name="ai">乱数で選ばれた手</param>
     /// <param name="clicked">クリックした手</param>
-    public void JudgeResult(int ai, GameObject clicked)
+    void JudgeResult(int ai, GameObject clicked)
     {
         int clickedHand = 0;
         // クリックされた手の情報をclickedHandに格納

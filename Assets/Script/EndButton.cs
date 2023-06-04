@@ -9,7 +9,6 @@ public class EndButton : MonoBehaviour
     [SerializeField] GameObject obj;
     ExeJanken exe;
 
-    // Start is called before the first frame update
     void Start()
     {
         exe = obj.GetComponent<ExeJanken>();

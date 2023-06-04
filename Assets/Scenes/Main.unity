@@ -543,9 +543,6 @@ MonoBehaviour:
   - {fileID: 1957192732}
   - {fileID: 2073262228}
   waitTime: 1.5
-  winScore: 0
-  loseScore: 0
-  evenScore: 0
 --- !u!4 &770031425
 Transform:
   m_ObjectHideFlags: 0
