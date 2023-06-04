@@ -6,6 +6,7 @@ public class EndGame : MonoBehaviour
 {
     public void OnClick()
     {
+        // プレイヤーデータ全消去
         PlayerPrefs.DeleteAll();
 
         // ゲームを終了

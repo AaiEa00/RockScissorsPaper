@@ -11,6 +11,7 @@ public class PrintRecords : MonoBehaviour
     {
         TryGetComponent(out _text);
 
+        // レコード表示
         _text.text = "かち: " + PlayerPrefs.GetInt("かち")
                         + "  あいこ: " + PlayerPrefs.GetInt("あいこ")
                         + "  まけ: " + PlayerPrefs.GetInt("まけ");

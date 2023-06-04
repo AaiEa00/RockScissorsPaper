@@ -7,6 +7,7 @@ public class ContinueGame : MonoBehaviour
 {
     public void OnClick()
     {
-        SceneManager.LoadScene(0);
+        int mainScene = 3;
+        SceneManager.LoadScene(mainScene);
     }
 }
