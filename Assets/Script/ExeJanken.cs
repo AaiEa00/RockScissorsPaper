@@ -14,9 +14,9 @@ public class ExeJanken : MonoBehaviour
     // 結果
     enum resultTypes: int
     {
-        win,
         even,
         lose,
+        win,
     }
 
     // シーン遷移前待機時間
@@ -61,34 +61,20 @@ public class ExeJanken : MonoBehaviour
                 clickedHand = i;
             }
         }
-
-        // 勝ち
-        if (clickedHand == ai)
+        
+        // 勝ちと負けのaiとclickedの差は常に3
+        var result = (clickedHand - ai + 3) % 3;
+        if (result == (int)resultTypes.even)
         {
             Invoke("LoadSceneEven", waitTime);
         }
-        // 0(グー)と2(パー)の組み合わせを先に処理
-        else if (clickedHand == 2 && ai == 0)
-        {
-            Invoke("LoadSceneWin", waitTime);
-        }
-        else if (clickedHand == 0 && ai == 2)
-        {
-            Invoke("LoadSceneLose", waitTime);
-        }
-        // 勝ち
-        else if (clickedHand < ai)
-        {
-            Invoke("LoadSceneWin", waitTime);
-        }
-        // 負け
-        else if (clickedHand > ai)
+        else if (result == (int)resultTypes.lose)
         {
             Invoke("LoadSceneLose", waitTime);
         }
         else
         {
-            Debug.Assert(false);
+            Invoke("LoadSceneWin", waitTime);
         }
     }
 
